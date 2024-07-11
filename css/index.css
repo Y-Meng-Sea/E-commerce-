@@ -7,7 +7,7 @@
 header {
   background-color: #131921;
 }
-nav {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,7 +134,7 @@ nav {
   top: 0;
   width: 0%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: all linear 0.2s;
   z-index: 1;
 }
@@ -144,15 +144,16 @@ nav {
   background-color: #f08807;
 }
 .cart-header {
-  height: 50px;
+  height: 70px;
   background-color: white;
   display: flex;
   align-items: center;
-  padding: 2rem 2rem;
+  justify-content: start;
 }
 .close-button {
   font-size: 1.5rem;
   cursor: pointer;
+  margin-left: 2rem;
 }
 /* side bar menu */
 .side-menu {
@@ -163,7 +164,6 @@ nav {
   left: 0;
   transition: all linear 0.2s;
   z-index: 1;
-  overflow: hidden;
 }
 .side-menu-container {
   width: 100%;
@@ -182,11 +182,37 @@ nav {
   font-size: 1.2rem;
   margin-right: 2rem;
 }
+
+.navegation-link {
+  background-color: white;
+  height: 40px;
+  display: flex;
+  margin: auto 2rem;
+  align-items: center;
+}
+.navegation-link > ul {
+  display: flex;
+  gap: 1.3rem;
+}
+.navegation-link > ul li {
+  list-style: none;
+}
+.navegation-link > ul li a {
+  text-decoration: none;
+  color: black;
+}
+.side-navegation {
+  cursor: pointer;
+  margin-right: 2rem;
+}
 @media screen and (max-width: 768px) {
+  .navegation-link {
+    display: none;
+  }
   header {
     height: 105px;
   }
-  nav {
+  .navbar {
     position: relative;
     display: flex;
     align-items: center;

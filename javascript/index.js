@@ -25,6 +25,7 @@ closeCartBtn.addEventListener("click", () => {
 });
 
 // ----------> menu side bar <-------------
+let sideNavegationBar = document.querySelector(".side-navegation");
 let sideMenuContainer = document.querySelector(".side-menu");
 let cloneSideMenuBtn = document.querySelector(".js-close-side-menu-btn");
 let openSideMenu = document.querySelector(".hamburger-menu");
@@ -37,6 +38,19 @@ window.addEventListener("resize", () => {
 openSideMenu.addEventListener("click", () => {
   if (sideMenuContainer.style.width === "0%") {
     sideMenuContainer.style.width = "60%";
+    cartContainer.style.width = "0%";
+  } else {
+    sideMenuContainer.style.width = "0%";
+  }
+});
+
+sideNavegationBar.addEventListener("click", () => {
+  if (sideMenuContainer.style.width === "0%") {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      sideMenuContainer.style.width = "60%";
+    } else {
+      sideMenuContainer.style.width = "30%";
+    }
     cartContainer.style.width = "0%";
   } else {
     sideMenuContainer.style.width = "0%";
