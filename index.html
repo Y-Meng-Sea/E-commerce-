@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <title>E-commerce</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <nav>
+        <div class="logo">
+          <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <a class="desktop-logo" href="#"><img src="./asset/icon/amazon-logo-white.png" alt="" /></a>
+          <a class="mobile-logo" href="#"><img src="./asset/icon/amazon-mobile-logo-white.png" alt="" /></a>
+        </div>
+        <div class="search-container">
+          <input class="search-fields" type="text" placeholder="Search" name="" id="" />
+          <div class="search-button">
+            <img src="./asset/icon/search-icon.png" alt="" />
+          </div>
+        </div>
+        <div class="left-side">
+          <div class="return-and-orders">
+            <a href="#">
+              <span class="return"> Returns </span>
+              <span class="Orders">&Orders</span>
+            </a>
+          </div>
+          <div class="cart js-cart">
+            <div class="cart-icon">
+              <p class="cart-quantity">0</p>
+              <img src="./asset/icon/cart-icon.png" alt="" />
+            </div>
+            <div class="cart-text">Cart</div>
+          </div>
+        </div>
+      </nav>
+      <div class="sidebar js-sidebar">
+        <div class="cart-item-container">
+          <div class="cart-header">
+            <div class="close-button js-close-sidebar-btn">
+              <i class="fa-solid fa-x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side-menu">
+        <div class="side-menu-container">
+          <div class="side-menu-header">
+            <div class="close-side-menu js-close-side-menu-btn">
+              <i class="fa-solid fa-x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Image carousel  -->
+    <section>
+      <div class="carousel-container">
+        <div class="slides">
+          <img src="./asset/carousel-image/image1.jpg" alt="image1" />
+          <img src="./asset/carousel-image/image2.jpg" alt="image2" />
+          <!-- <img src="./asset/carousel-image/image1.jpg" alt="image3" /> -->
+        </div>
+        <button class="prvious-button"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="next-button"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>

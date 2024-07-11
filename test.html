@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .carousel-container {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        outline: none;
+      }
+
+      .carousel-button.prev {
+        left: 10px;
+      }
+
+      .carousel-button.next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Image carousel  -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item"><img src="./asset/carousel-image/image1.jpg" alt="Image 1" /></div>
+        <div class="carousel-item"><img src="./asset/carousel-image/image2.jpg" alt="Image 2" /></div>
+        <div class="carousel-item"><img src="./asset/carousel-image/image1.jpg" alt="Image 3" /></div>
+        <div class="carousel-item"><img src="./asset/carousel-image/image2.jpg" alt="Image 4" /></div>
+      </div>
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+    </div>
+
+    <script>
+      const carousel = document.querySelector(".carousel");
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      const prevButton = document.querySelector(".carousel-button.prev");
+      const nextButton = document.querySelector(".carousel-button.next");
+
+      let currentIndex = 0;
+      let autoPlayInterval;
+      let isTransitioning = false;
+
+      // Clone first and last items for seamless looping
+      const firstItemClone = carouselItems[0].cloneNode(true);
+      const lastItemClone = carouselItems[carouselItems.length - 1].cloneNode(true);
+      carousel.appendChild(firstItemClone);
+      carousel.insertBefore(lastItemClone, carouselItems[0]);
+
+      // Adjust the carousel to show the first slide correctly
+      carousel.style.transform = "translateX(-100%)";
+
+      // Function to update the carousel position
+      function updateCarousel() {
+        const offset = -(currentIndex + 1) * 100;
+        carousel.style.transition = "transform 0.5s ease";
+        carousel.style.transform = `translateX(${offset}%)`;
+      }
+
+      // Function to handle seamless looping
+      carousel.addEventListener("transitionend", () => {
+        isTransitioning = false;
+        enableButtons();
+
+        if (currentIndex === carouselItems.length) {
+          carousel.style.transition = "none";
+          currentIndex = 0;
+          const offset = -(currentIndex + 1) * 100;
+          carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        if (currentIndex === -1) {
+          carousel.style.transition = "none";
+          currentIndex = carouselItems.length - 1;
+          const offset = -(currentIndex + 1) * 100;
+          carousel.style.transform = `translateX(${offset}%)`;
+        }
+      });
+
+      // Function to go to the next slide
+      function nextSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        disableButtons();
+        currentIndex++;
+        updateCarousel();
+      }
+
+      // Function to go to the previous slide
+      function prevSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        disableButtons();
+        currentIndex--;
+        updateCarousel();
+      }
+
+      // Disable buttons during transition
+      function disableButtons() {
+        prevButton.disabled = true;
+        nextButton.disabled = true;
+      }
+
+      // Enable buttons after transition
+      function enableButtons() {
+        prevButton.disabled = false;
+        nextButton.disabled = false;
+      }
+
+      // Event listeners for the buttons
+      prevButton.addEventListener("click", () => {
+        clearInterval(autoPlayInterval); // Stop autoplay when manual navigation is used
+        prevSlide();
+        startAutoPlay(); // Restart autoplay
+      });
+
+      nextButton.addEventListener("click", () => {
+        clearInterval(autoPlayInterval); // Stop autoplay when manual navigation is used
+        nextSlide();
+        startAutoPlay(); // Restart autoplay
+      });
+
+      // Function to start autoplay
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+      }
+
+      // Start autoplay when the page loads
+      startAutoPlay();
+    </script>
+  </body>
+</html>
