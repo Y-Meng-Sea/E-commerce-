@@ -1,4 +1,4 @@
-import { cards } from "./card.js";
+import { generateCard1, generateCard4 } from "./generateCard.js";
 
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
@@ -157,19 +157,5 @@ function autoPlaySlider() {
 autoPlaySlider();
 
 // ----------> car product <------------
-let cardContainer = document.querySelector(".card-container");
-let html;
-cards.forEach((card) => {
-  html = `
-    <div class="card">
-          <div class="card-text">${card.cardText}</div>
-          <div class="card-image">
-            <img src="${card.cardImage}" alt="" />
-          </div>
-          <div class="card-link">
-            ${card.cardLink}
-          </div>
-        </div>
-  `;
-  cardContainer.innerHTML += html;
-});
+generateCard1(3);
+generateCard4(3);

@@ -1,4 +1,4 @@
-export const cards = [
+export const cards1 = [
   {
     cardText: "Save 15% on select Galaxy pre-order bundles",
     cardImage: "./asset/card-image/headset.jpg",
