@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: Roboto, Arial;
 }
+body {
+  background-color: #e3e6e6;
+}
 header {
   background-color: #131921;
 }
@@ -187,7 +190,7 @@ header {
   background-color: white;
   height: 40px;
   display: flex;
-  margin: auto 2rem;
+  padding-left: 2rem;
   align-items: center;
 }
 .navegation-link > ul {
@@ -304,9 +307,16 @@ header {
 .slides {
   display: flex;
 }
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  background-image: linear-gradient(0deg, #e3e6e6, transparent);
+  z-index: 1;
+}
 .slides > img {
   width: 100%;
-  transition: all linear 0.2s;
 }
 .prvious-button {
   cursor: pointer;
@@ -339,4 +349,46 @@ header {
 .next-button:focus {
   border: 2px solid black;
   outline: 2px solid white;
+}
+
+/*  card product section */
+.product-card {
+  transform: translateY(-30%);
+  position: absolute;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 999;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+.card {
+  background-color: white;
+  padding: 1rem 1rem;
+}
+.card-text {
+  font-size: 1.2rem;
+  margin: 1rem auto;
+}
+.card-image > img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .product-card {
+    transform: translateY(-0%);
+    background: transparent;
+    margin: auto 0.5rem;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
 }

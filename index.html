@@ -84,9 +84,11 @@
         <li><a href="#">Fashion</a></li>
       </ul>
     </nav>
+
     <!-- Image carousel  -->
     <section>
       <div class="carousel-container">
+        <div class="overlay"></div>
         <div class="slides">
           <img src="./asset/carousel-image/image1.jpg" alt="image1" />
           <img src="./asset/carousel-image/image2.jpg" alt="image2" />
@@ -96,8 +98,12 @@
         <button class="next-button"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </section>
-    <section style="height: 100vh"></section>
 
-    <script src="./javascript/index.js"></script>
+    <!-- product section -->
+    <section class="product-card">
+      <div class="card-container"></div>
+    </section>
+
+    <script type="module" src="./javascript/index.js"></script>
   </body>
 </html>

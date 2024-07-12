@@ -1,3 +1,5 @@
+import { cards } from "./card.js";
+
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
 let closeCartBtn = document.querySelector(".js-close-sidebar-btn");
@@ -153,3 +155,21 @@ function autoPlaySlider() {
 }
 
 autoPlaySlider();
+
+// ----------> car product <------------
+let cardContainer = document.querySelector(".card-container");
+let html;
+cards.forEach((card) => {
+  html = `
+    <div class="card">
+          <div class="card-text">${card.cardText}</div>
+          <div class="card-image">
+            <img src="${card.cardImage}" alt="" />
+          </div>
+          <div class="card-link">
+            ${card.cardLink}
+          </div>
+        </div>
+  `;
+  cardContainer.innerHTML += html;
+});
