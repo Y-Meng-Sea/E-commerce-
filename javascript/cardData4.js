@@ -36,6 +36,8 @@ export const cards4 = [
     cardText: "box",
   },
   {
+    cardTitle: "new gamebundles",
+    cardLink: '<a href="#">visit now</a>',
     cardImage: "./asset/card-image/freshspace1.jpg",
     cardText: "Health and Beauty",
   },

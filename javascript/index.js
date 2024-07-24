@@ -157,6 +157,5 @@ function autoPlaySlider() {
 autoPlaySlider();
 
 // ----------> car product <------------
-generateCard1(5);
-generateCard4(2);
-generateCard1(4);
+generateCard1(3);
+generateCard4(3);

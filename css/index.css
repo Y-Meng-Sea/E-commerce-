@@ -355,7 +355,7 @@ header {
 
 /*  card product section */
 .product-card {
-  transform: translateY(-30%);
+  transform: translateY(-30vh);
   position: absolute;
   padding-top: 2rem;
   padding-left: 1rem;

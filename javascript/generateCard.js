@@ -4,6 +4,10 @@ let cardContainer = document.querySelector(".card-container");
 let structureCard1;
 let structureCard4;
 let card1Loop = 0;
+let index1 = 0;
+let index2 = 1;
+let index3 = 2;
+let index4 = 3;
 function generateCard1(numberOfcards) {
   for (let i = 0; i < numberOfcards; i++) {
     structureCard1 = `
@@ -20,42 +24,52 @@ function generateCard1(numberOfcards) {
     cardContainer.innerHTML += structureCard1;
   }
 }
-
 function generateCard4(numberOfcards) {
-  let totalGenerate = numberOfcards * 4;
-  for (let i = 0; i <= totalGenerate; i = i + 4) {
+  console.log("start");
+  console.log(index1, index2, index3, index4);
+  for (let i = 0; i < numberOfcards; i++) {
     structureCard4 = `
     <div class="card">
-          <div class="card-text">${cards4[i].cardTitle}</div>
+          <div class="card-text">${cards4[index1].cardTitle}</div>
           <div class="card-content">
             <div class="card-image-grid">
 
               <div class="card-grid-item">
-                <img src="${cards4[i].cardImage}" class="img-fluid rounded-top" alt="" />
-                <p>${cards4[i].cardText}</p>
+                <img src="${cards4[index1].cardImage}" class="img-fluid rounded-top" alt="" />
+                <p>${cards4[index1].cardText}</p>
               </div>
 
               <div class="card-grid-item">
-                <img src="${cards4[i + 1].cardImage}" class="img-fluid rounded-top" alt="" />
-                <p>${cards4[i + 1].cardText}</p>
+                <img src="${cards4[index2].cardImage}" class="img-fluid rounded-top" alt="" />
+                <p>${cards4[index2].cardText}</p>
               </div>
 
               <div class="card-grid-item">
-                <img src="${cards4[i + 2].cardImage}" class="img-fluid rounded-top" alt="" />
-                <p>${cards4[i + 2].cardText}</p>
+                <img src="${cards4[index3].cardImage}" class="img-fluid rounded-top" alt="" />
+                <p>${cards4[index3].cardText}</p>
               </div>
 
               <div class="card-grid-item">
-                <img src="${cards4[i + 3].cardImage}" class="img-fluid rounded-top" alt="" />
-                <p>${cards4[i + 3].cardText}</p>
+                <img src="${cards4[index4].cardImage}" class="img-fluid rounded-top" alt="" />
+                <p>${cards4[index4].cardText}</p>
               </div>
           
             </div>
           </div>
-          <div class="card-link">${cards4[i].cardLink}</div>
+          <div class="card-link">${cards4[index1].cardLink}</div>
         </div>
   `;
+
+    if (index1 >= cards4.length - 1 || index2 >= cards4.length - 1 || index3 >= cards4.length - 1 || index4 >= cards4.length - 1) {
+      (index1 = 0), (index2 = 1), (index3 = 2), (index4 = 3);
+    } else {
+      index1 += 4;
+      index2 += 4;
+      index3 += 4;
+      index4 += 4;
+    }
     cardContainer.innerHTML += structureCard4;
+    console.log("end");
   }
 }
 
