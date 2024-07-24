@@ -1,8 +1,4 @@
 export const cards4 = [
-  // {
-  //   cardTitle: "Save 15% on select Galaxy pre-order bundles",
-  //   cardLink: '<a href="#">shop all winter products</a>',
-  // },
   {
     cardTitle: "Save 15% on select Galaxy pre-order bundles",
     cardLink: '<a href="#">shop all winter products</a>',
@@ -38,5 +34,21 @@ export const cards4 = [
   {
     cardImage: "./asset/card-image/box.jpg",
     cardText: "box",
+  },
+  {
+    cardImage: "./asset/card-image/freshspace1.jpg",
+    cardText: "Health and Beauty",
+  },
+  {
+    cardImage: "./asset/card-image/freshspace2.jpg",
+    cardText: "Home",
+  },
+  {
+    cardImage: "./asset/card-image/freshspace3.jpg",
+    cardText: "Kitchen",
+  },
+  {
+    cardImage: "./asset/card-image/freshspace4.jpg",
+    cardText: "Dining",
   },
 ];

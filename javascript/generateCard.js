@@ -3,31 +3,23 @@ import { cards4 } from "./cardData4.js";
 let cardContainer = document.querySelector(".card-container");
 let structureCard1;
 let structureCard4;
+let card1Loop = 0;
 function generateCard1(numberOfcards) {
   for (let i = 0; i < numberOfcards; i++) {
     structureCard1 = `
         <div class="card">
-            <div class="card-text">${cards1[i].cardText}</div>
+            <div class="card-text">${cards1[card1Loop].cardText}</div>
             <div class="card-image">
-                <img src="${cards1[i].cardImage}" alt="" />
+                <img src="${cards1[card1Loop].cardImage}" alt="" />
             </div>
             <div class="card-link">
-                ${cards1[i].cardLink}
+                ${cards1[card1Loop].cardLink}
             </div>
         </div> `;
+    card1Loop >= cards1.length - 1 ? (card1Loop = 0) : card1Loop++;
     cardContainer.innerHTML += structureCard1;
   }
 }
-
-cards4.forEach((card, index) => {
-  if (index === 0) return;
-  let html = `
-    <div class="card-grid-item">
-      <img src="${card.cardImage}" class="img-fluid rounded-top" alt="" />
-      <p>${card.cardText}</p>
-    </div>
-  `;
-});
 
 function generateCard4(numberOfcards) {
   let totalGenerate = numberOfcards * 4;

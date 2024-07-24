@@ -139,7 +139,7 @@ header {
   height: 100%;
   overflow-x: hidden;
   transition: all linear 0.2s;
-  z-index: 1;
+  z-index: 3;
 }
 .cart-item-container {
   width: 100%;
@@ -166,7 +166,7 @@ header {
   top: 0;
   left: 0;
   transition: all linear 0.2s;
-  z-index: 1;
+  z-index: 3;
 }
 .side-menu-container {
   width: 100%;
@@ -410,8 +410,6 @@ header {
     transform: translateY(-0%);
     width: 100%;
   }
-  .card {
-  }
   .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -423,8 +421,6 @@ header {
   .product-card {
     transform: translateY(-0%);
     width: 100%;
-  }
-  .card {
   }
   .card-container {
     display: grid;
