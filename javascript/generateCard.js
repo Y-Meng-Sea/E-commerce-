@@ -1,5 +1,5 @@
-import { cards1 } from "./cardData1.js";
-import { cards4 } from "./cardData4.js";
+import { cards1 } from "./Data/cardData1.js";
+import { cards4 } from "./Data/cardData4.js";
 let cardContainer = document.querySelector(".card-container");
 let structureCard1;
 let structureCard4;
@@ -25,8 +25,6 @@ function generateCard1(numberOfcards) {
   }
 }
 function generateCard4(numberOfcards) {
-  console.log("start");
-  console.log(index1, index2, index3, index4);
   for (let i = 0; i < numberOfcards; i++) {
     structureCard4 = `
     <div class="card">
@@ -69,7 +67,6 @@ function generateCard4(numberOfcards) {
       index4 += 4;
     }
     cardContainer.innerHTML += structureCard4;
-    console.log("end");
   }
 }
 

@@ -1,4 +1,5 @@
 import { generateCard1, generateCard4 } from "./generateCard.js";
+import { Slides } from "./Data/carouselData.js";
 
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
@@ -64,7 +65,12 @@ cloneSideMenuBtn.addEventListener("click", () => {
 });
 
 // ----------> image carousel <------------
+// generate the carousel
 const slidesContainer = document.querySelector(".slides");
+Slides.forEach((slide) => {
+  let eachImage = `<img src="${slide.image}" alt="${slide.alt}" />`;
+  document.querySelector(".slides").innerHTML += eachImage;
+});
 let slides = document.querySelectorAll(".slides img");
 let nextBtn = document.querySelector(".next-button");
 let previousBtn = document.querySelector(".prvious-button");
