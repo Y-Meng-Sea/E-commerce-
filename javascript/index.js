@@ -66,11 +66,12 @@ cloneSideMenuBtn.addEventListener("click", () => {
 
 // ----------> image carousel <------------
 // generate the carousel
-const slidesContainer = document.querySelector(".slides");
 Slides.forEach((slide) => {
   let eachImage = `<img src="${slide.image}" alt="${slide.alt}" />`;
   document.querySelector(".slides").innerHTML += eachImage;
 });
+// make the carousel
+const slidesContainer = document.querySelector(".slides");
 let slides = document.querySelectorAll(".slides img");
 let nextBtn = document.querySelector(".next-button");
 let previousBtn = document.querySelector(".prvious-button");
