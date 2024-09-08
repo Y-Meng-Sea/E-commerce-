@@ -1,6 +1,6 @@
 import { generateCard1, generateCard4 } from "./generateCard.js";
 import { Slides } from "./Data/carouselData.js";
-
+import { genSlid } from "./bestSellerSlider.js";
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
 let closeCartBtn = document.querySelector(".js-close-sidebar-btn");
@@ -163,6 +163,12 @@ function autoPlaySlider() {
 
 autoPlaySlider();
 
-// ----------> car product <------------
-generateCard1(3);
-generateCard4(3);
+// ----------> card product <------------
+// to generate can need 2 argument amount of can and class name as a selector
+generateCard1(5, ".card-container");
+generateCard4(4, ".card-container");
+
+// best seller card slider
+genSlid(); // function to insert image to best seller products
+generateCard1(4, ".card-container1");
+generateCard4(2, ".card-container1");
