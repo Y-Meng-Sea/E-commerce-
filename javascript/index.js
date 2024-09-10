@@ -170,6 +170,22 @@ generateCard4(4, ".card-container");
 
 // best seller card slider
 genSlid(); // function to insert image to best seller products
+let bestSellerContainer = document.querySelector(".best-product-slides");
+document.querySelector(".best-sell-next-slide").addEventListener("click", () => {
+  bestSellerContainer.scrollTo({
+    left: bestSellerContainer.scrollLeft + bestSellerContainer.clientWidth, // Move 1000 pixels to the right
+    behavior: "smooth", // Add smooth transition
+  });
+});
+
+document.querySelector(".best-sell-previous-slide").addEventListener("click", () => {
+  bestSellerContainer.scrollTo({
+    left: bestSellerContainer.scrollLeft - bestSellerContainer.clientWidth, // Move 1000 pixels to the right
+    behavior: "smooth", // Add smooth transition
+  });
+});
+
+// generate more card
 generateCard1(4, ".card-container1");
 generateCard4(2, ".card-container1");
 generateCard1(2, ".card-container1");
