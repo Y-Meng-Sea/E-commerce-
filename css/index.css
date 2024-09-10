@@ -549,15 +549,16 @@ header {
 
 /* footer */
 footer {
-  background-color: black;
   width: 100%;
   height: auto;
   padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 .footer-content-container {
+  background-color: #232f3e;
   display: flex;
   justify-content: space-evenly;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .footer-content-container > * {
   display: flex;
@@ -571,4 +572,45 @@ footer {
 }
 .footer-content-container > * > a:hover {
   text-decoration: underline;
+}
+.lang-currency-region {
+  height: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #232f3e;
+  border-top: 1px solid #3a4553;
+}
+.logo-footer {
+  margin-right: 4rem;
+}
+.logo-footer > img {
+  width: 5rem;
+  transform: translateY(8px);
+}
+.lang,
+.currency,
+.region {
+  margin: 0.5rem;
+}
+.language-selection,
+.currency-selection,
+.region-selection {
+  width: 100px;
+  height: 30px;
+  background: transparent;
+  color: white;
+}
+.right-reverse {
+  background-color: #131a22;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-reverse > p {
+  color: white;
+  font-size: small;
 }
