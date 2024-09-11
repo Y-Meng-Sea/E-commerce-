@@ -1,6 +1,6 @@
 import { generateCard1, generateCard4 } from "./generateCard.js";
 import { Slides } from "./Data/carouselData.js";
-import { genSlid } from "./bestSellerSlider.js";
+import { generateBestSellContainer, generateBestSlide } from "./bestSellerSlider.js";
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
 let closeCartBtn = document.querySelector(".js-close-sidebar-btn");
@@ -164,28 +164,28 @@ function autoPlaySlider() {
 autoPlaySlider();
 
 // ----------> card product <------------
-// to generate can need 2 argument amount of can and class name as a selector
+/* to generate can need 2 argument amount of can and class name as a selector*/
 generateCard1(4, ".card-container");
 generateCard4(4, ".card-container");
 
-// best seller card slider
-genSlid(); // function to insert image to best seller products
-let bestSellerContainer = document.querySelector(".best-product-slides");
-document.querySelector(".best-sell-next-slide").addEventListener("click", () => {
-  bestSellerContainer.scrollTo({
-    left: bestSellerContainer.scrollLeft + bestSellerContainer.clientWidth, // Move 1000 pixels to the right
-    behavior: "smooth", // Add smooth transition
-  });
-});
+//------------> best seller card slider <---------------
+/*to generate best seller slide first generate slide container , this need 2 argument
+  wrapper class name should be "best-sell-wraperN" ,( N is number ) 
+  and secornd is class name for insert slide this should be "best-product-slidesN" (N is nummber)
+*/
+generateBestSellContainer("best-sell-wraper1", "best-product-slides1");
+generateBestSlide(".best-product-slides1");
 
-document.querySelector(".best-sell-previous-slide").addEventListener("click", () => {
-  bestSellerContainer.scrollTo({
-    left: bestSellerContainer.scrollLeft - bestSellerContainer.clientWidth, // Move 1000 pixels to the right
-    behavior: "smooth", // Add smooth transition
-  });
-});
-
-// generate more card
-generateCard1(4, ".card-container1");
+// generate more prduct card
 generateCard4(2, ".card-container1");
 generateCard1(2, ".card-container1");
+
+// generate more best seller slide
+generateBestSellContainer("best-sell-wraper2", "best-product-slides2");
+generateBestSlide(".best-product-slides2");
+
+// generate more prduct card
+generateCard1(4, ".card-container2");
+// generate more best seller slide
+generateBestSellContainer("best-sell-wraper3", "best-product-slides3");
+generateBestSlide(".best-product-slides3");

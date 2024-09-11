@@ -60,8 +60,7 @@ export const cards4 = [
   {
     cardTitle: "New home arrivals under $50",
     cardLink: '<a href="#">shop the latest from home</a>',
-    cardImage:
-      "./asset/card-image/4layoutcad/new home arrive/bedding & bath.jpg",
+    cardImage: "./asset/card-image/4layoutcad/new home arrive/bedding & bath.jpg",
     cardText: "bedding & bath",
   },
   {
@@ -69,21 +68,18 @@ export const cards4 = [
     cardText: "Decor",
   },
   {
-    cardImage:
-      "./asset/card-image/4layoutcad/new home arrive/home improment.jpg",
+    cardImage: "./asset/card-image/4layoutcad/new home arrive/home improment.jpg",
     cardText: "home improvment",
   },
   {
-    cardImage:
-      "./asset/card-image/4layoutcad/new home arrive/kitchen &dining.jpg",
+    cardImage: "./asset/card-image/4layoutcad/new home arrive/kitchen &dining.jpg",
     cardText: "kitchen &dining",
   },
   // 5
   {
     cardTitle: "Shop deals in Fashion",
     cardLink: '<a href="#">see all deals</a>',
-    cardImage:
-      "./asset/card-image/4layoutcad/dealFashion/dresses under 30$.jpg",
+    cardImage: "./asset/card-image/4layoutcad/dealFashion/dresses under 30$.jpg",
     cardText: "dresses under 30$",
   },
   {
@@ -97,5 +93,24 @@ export const cards4 = [
   {
     cardImage: "./asset/card-image/4layoutcad/dealFashion/shoes under 50$.jpg",
     cardText: "shoes under 50$",
+  },
+  // 6
+  {
+    cardTitle: "Level up your beauty routine",
+    cardLink: '<a href="#">see more</a>',
+    cardImage: "./asset/card-image/4layoutcad/Levelupyourbeautyroutine/Brushes.jpg",
+    cardText: "Brushes",
+  },
+  {
+    cardImage: "./asset/card-image/4layoutcad/Levelupyourbeautyroutine/Mackup.jpg",
+    cardText: "Mackup",
+  },
+  {
+    cardImage: "./asset/card-image/4layoutcad/Levelupyourbeautyroutine/mirros.jpg",
+    cardText: "mirros",
+  },
+  {
+    cardImage: "./asset/card-image/4layoutcad/Levelupyourbeautyroutine/sponges.jpg",
+    cardText: "sponges",
   },
 ];

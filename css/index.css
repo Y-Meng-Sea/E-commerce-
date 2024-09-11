@@ -485,6 +485,12 @@ header {
     transform: translateY(0vh);
   }
 }
+.best-sell-wraper {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  display: block;
+  background-color: white;
+}
 .best-product-slides {
   display: flex;
   overflow-y: scroll;
@@ -578,6 +584,7 @@ footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: #232f3e;
