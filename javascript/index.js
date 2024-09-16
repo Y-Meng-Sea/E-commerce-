@@ -1,6 +1,7 @@
 import { generateCard1, generateCard4 } from "./generateCard.js";
 import { Slides } from "./Data/carouselData.js";
 import { generateBestSellContainer, generateBestSlide } from "./bestSellerSlider.js";
+import { viewedItems } from "./viewedItems.js";
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
 let closeCartBtn = document.querySelector(".js-close-sidebar-btn");
@@ -189,3 +190,6 @@ generateCard1(4, ".card-container2");
 // generate more best seller slide
 generateBestSellContainer("best-sell-wraper3", "best-product-slides3");
 generateBestSlide(".best-product-slides3");
+
+//
+viewedItems();
