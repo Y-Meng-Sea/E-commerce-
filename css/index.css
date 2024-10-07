@@ -161,31 +161,116 @@ header {
 /* side bar menu */
 .side-menu {
   position: absolute;
+  display: flex;
   width: 0%;
   height: 100%;
   top: 0;
   left: 0;
-  transition: all linear 0.2s;
+  transition: all linear 0.1s;
   z-index: 4;
 }
+.overlay-side-menu {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .side-menu-container {
   width: 100%;
   height: 100%;
-  background-color: #febd69;
+  background-color: white;
+  overflow: hidden;
 }
 .side-menu-header {
   height: 70px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  padding-left: 2.5rem;
+  /* margin-bottom: 1rem; */
+  background-color: #232f3e;
+  align-content: center;
+  overflow: hidden;
 }
 .close-side-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
   cursor: pointer;
   font-size: 1.2rem;
   margin-right: 2rem;
 }
+.close-side-menu > i {
+  color: white;
+}
+.login {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.login > i {
+  margin-right: 0.5rem;
+  color: black;
+  background-color: whitesmoke;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* overflow-y: hidden; */
+}
+.body > section {
+  padding: 0;
+  height: 80vh;
+  position: relative;
+}
+.body .categories {
+  font-weight: 600;
+  margin: 1rem auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.body > * .see-all-category {
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+}
+.body > * .see-all-category > span {
+  margin-right: 0.5rem;
+}
+.body > * .category {
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.body > * .category:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.body > * .see-all-category:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* go in to categories */
+.goto {
+  position: absolute;
+  right: 0;
+  margin-left: 1rem;
+  top: 0;
+  height: 100%;
+  background-color: white;
+  transition: all 0.2s;
+}
 
+.gotoMain {
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+.gotoMain > i {
+  margin-right: 0.7rem;
+  margin-left: 1rem;
+  opacity: 0.5;
+}
+.gotoMain:hover > i {
+  opacity: 1;
+}
 .navegation-link {
   background-color: white;
   height: 40px;

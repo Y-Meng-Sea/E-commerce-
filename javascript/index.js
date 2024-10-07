@@ -5,64 +5,97 @@ import { viewedItems } from "./viewedItems.js";
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
 let closeCartBtn = document.querySelector(".js-close-sidebar-btn");
-const cartContainer = document.querySelector(".js-sidebar");
+const cart = document.querySelector(".js-sidebar");
+let cartContaiern = document.querySelector(".cart-item-container");
 
-cartContainer.style.width = "0%";
+cart.style.width = "0%";
 window.addEventListener("resize", () => {
-  cartContainer.style.width = "0%";
+  cart.style.width = "0%";
 });
 
 cartBtn.addEventListener("click", () => {
-  if (cartContainer.style.width === "0%") {
+  if (cart.style.width === "0%") {
     if (window.matchMedia("(max-width:768px)").matches) {
-      cartContainer.style.width = "60%";
+      cart.style.width = "60%";
+      document.body.style.overflow = "hidden";
       sideMenuContainer.style.width = "0%";
     } else {
-      cartContainer.style.width = "30%";
+      cart.style.width = "30%";
+      document.body.style.overflow = "hidden";
     }
   } else {
-    cartContainer.style.width = "0%";
+    cart.style.width = "0%";
+    document.body.style.overflow = "auto";
   }
 });
 closeCartBtn.addEventListener("click", () => {
-  cartContainer.style.width = "0%";
+  cart.style.width = "0%";
+  document.body.style.overflow = "auto";
 });
 
 // ----------> menu side bar <-------------
 let sideNavegationBar = document.querySelector(".side-navegation");
-let sideMenuContainer = document.querySelector(".side-menu");
+let sideMenu = document.querySelector(".side-menu");
+let sideMenuContainer = document.querySelector(".side-menu-container");
 let cloneSideMenuBtn = document.querySelector(".js-close-side-menu-btn");
 let openSideMenu = document.querySelector(".hamburger-menu");
-
-sideMenuContainer.style.width = "0%";
-window.addEventListener("resize", () => {
-  sideMenuContainer.style.width = "0%";
+// get the go in to category container
+let getInto = document.querySelector(".goto");
+let gotoMain = document.querySelector(".gotoMain");
+let category = document.querySelector(".category");
+let sideMenuBody = document.querySelector(".body");
+getInto.style.width = "0";
+category.addEventListener("click", () => {
+  getInto.style.width = "100%";
+  sideMenuBody.style.overflowY = "hidden";
+});
+gotoMain.addEventListener("click", () => {
+  getInto.style.width = "0";
+  sideMenuBody.style.overflowY = "scroll";
 });
 
+// if the window resize side menu will close auto
+sideMenu.style.width = "0%";
+window.addEventListener("resize", () => {
+  sideMenu.style.width = "0%";
+});
+
+// open the side menu
 openSideMenu.addEventListener("click", () => {
-  if (sideMenuContainer.style.width === "0%") {
+  if (sideMenu.style.width === "0%") {
+    sideMenu.style.width = "100%";
     sideMenuContainer.style.width = "60%";
     cartContainer.style.width = "0%";
+    document.body.style.overflow = "hidden";
   } else {
-    sideMenuContainer.style.width = "0%";
+    sideMenu.style.width = "0%";
+    document.body.style.overflow = "auto";
   }
 });
 
+// open side nav bar
 sideNavegationBar.addEventListener("click", () => {
-  if (sideMenuContainer.style.width === "0%") {
+  if (sideMenu.style.width === "0%") {
     if (window.matchMedia("(max-width: 768px)").matches) {
+      sideMenu.style.width = "100%";
       sideMenuContainer.style.width = "60%";
+      document.body.style.overflow = "hidden";
     } else {
-      sideMenuContainer.style.width = "30%";
+      sideMenu.style.width = "100%";
+      sideMenuContainer.style.width = "40%";
+      document.body.style.overflow = "hidden";
     }
     cartContainer.style.width = "0%";
   } else {
-    sideMenuContainer.style.width = "0%";
+    sideMenu.style.width = "0%";
+    document.body.style.overflow = "auto";
   }
 });
 
 cloneSideMenuBtn.addEventListener("click", () => {
-  sideMenuContainer.style.width = "0%";
+  sideMenu.style.width = "0%";
+  getInto.style.width = "0";
+  document.body.style.overflow = "auto";
 });
 
 // ----------> image carousel <------------
