@@ -2,6 +2,7 @@ import { generateCard1, generateCard4 } from "./generateCard.js";
 import { Slides } from "./Data/carouselData.js";
 import { generateBestSellContainer, generateBestSlide } from "./bestSellerSlider.js";
 import { viewedItems } from "./viewedItems.js";
+import { generateCategory } from "./Data/categories.js";
 // -------------> cart side bar <-------------
 let cartBtn = document.querySelector(".js-cart");
 let closeCartBtn = document.querySelector(".js-close-sidebar-btn");
@@ -40,6 +41,8 @@ let sideMenuContainer = document.querySelector(".side-menu-container");
 let cloneSideMenuBtn = document.querySelector(".js-close-side-menu-btn");
 let openSideMenu = document.querySelector(".hamburger-menu");
 // get the go in to category container
+
+generateCategory();
 let getInto = document.querySelector(".goto");
 let gotoMain = document.querySelector(".gotoMain");
 let category = document.querySelector(".category");
@@ -226,3 +229,4 @@ generateBestSlide(".best-product-slides3");
 
 //
 viewedItems();
+//
