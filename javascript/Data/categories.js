@@ -32,6 +32,5 @@ export function generateCategory() {
     `;
   });
 
-  console.log(html);
   containerEl.innerHTML = html;
 }

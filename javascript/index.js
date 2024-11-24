@@ -7,7 +7,7 @@ import { generateCategory } from "./Data/categories.js";
 let cartBtn = document.querySelector(".js-cart");
 let closeCartBtn = document.querySelector(".js-close-sidebar-btn");
 const cart = document.querySelector(".js-sidebar");
-let cartContaiern = document.querySelector(".cart-item-container");
+let cartContainer = document.querySelector(".cart-item-container");
 
 cart.style.width = "0%";
 window.addEventListener("resize", () => {
@@ -45,13 +45,17 @@ let openSideMenu = document.querySelector(".hamburger-menu");
 generateCategory();
 let getInto = document.querySelector(".goto");
 let gotoMain = document.querySelector(".gotoMain");
-let category = document.querySelector(".category");
+let categorys = document.querySelectorAll(".category");
 let sideMenuBody = document.querySelector(".body");
 getInto.style.width = "0";
-category.addEventListener("click", () => {
-  getInto.style.width = "100%";
-  sideMenuBody.style.overflowY = "hidden";
+
+categorys.forEach((category) => {
+  category.addEventListener("click", () => {
+    getInto.style.width = "100%";
+    sideMenuBody.style.overflowY = "hidden";
+  });
 });
+
 gotoMain.addEventListener("click", () => {
   getInto.style.width = "0";
   sideMenuBody.style.overflowY = "scroll";

@@ -2,7 +2,7 @@ export const cards4 = [
   // 1
   {
     cardTitle: "Save 15% on select Galaxy pre-order bundles",
-    cardLink: '<a href="#">shop all winter products</a>',
+    cardLink: '<a href="./html/productPage.html">shop all winter products</a>',
     cardImage: "./asset/card-image/tablet.jpg",
     cardText: "brand new tablet",
   },
@@ -21,7 +21,7 @@ export const cards4 = [
   // 2
   {
     cardTitle: "new gamebundles",
-    cardLink: '<a href="#">visit now</a>',
+    cardLink: '<a href="./html/productPage.html">visit now</a>',
     cardImage: "./asset/card-image/game.jpg",
     cardText: "game",
   },
@@ -40,7 +40,7 @@ export const cards4 = [
   // 3
   {
     cardTitle: "new gamebundles",
-    cardLink: '<a href="#">visit now</a>',
+    cardLink: '<a href="./html/productPage.html">visit now</a>',
     cardImage: "./asset/card-image/freshspace1.jpg",
     cardText: "Health and Beauty",
   },
@@ -59,7 +59,7 @@ export const cards4 = [
   // 4
   {
     cardTitle: "New home arrivals under $50",
-    cardLink: '<a href="#">shop the latest from home</a>',
+    cardLink: '<a href="./html/productPage.html">shop the latest from home</a>',
     cardImage: "./asset/card-image/4layoutcad/new home arrive/bedding & bath.jpg",
     cardText: "bedding & bath",
   },
@@ -78,7 +78,7 @@ export const cards4 = [
   // 5
   {
     cardTitle: "Shop deals in Fashion",
-    cardLink: '<a href="#">see all deals</a>',
+    cardLink: '<a href="./html/productPage.html">see all deals</a>',
     cardImage: "./asset/card-image/4layoutcad/dealFashion/dresses under 30$.jpg",
     cardText: "dresses under 30$",
   },
@@ -97,7 +97,7 @@ export const cards4 = [
   // 6
   {
     cardTitle: "Level up your beauty routine",
-    cardLink: '<a href="#">see more</a>',
+    cardLink: '<a href="./html/productPage.html">see more</a>',
     cardImage: "./asset/card-image/4layoutcad/Levelupyourbeautyroutine/Brushes.jpg",
     cardText: "Brushes",
   },

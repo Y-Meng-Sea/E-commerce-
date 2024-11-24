@@ -3,7 +3,6 @@ let render = "";
 let cotainer = document.querySelector(".viewed-items-container");
 
 export function viewedItems() {
-  console.log(viewedItemsData[0].image);
   for (let i = 0; i < viewedItemsData.length; i++) {
     render += `
         <div class="viewed-item">

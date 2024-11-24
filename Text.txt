@@ -1,0 +1,13 @@
+#arr of all product -> loop throught the arr for display product 
+
+#filter option when the option is select using ID = kitchen for example
+we filter by ID = kitchen
+
+#the search bar in the top -> when user typing -> track the latter and match the 
+typing with the product name in arr the container that name
+
+//
+--------- for cart --------
+# when the button on the product is click we track it ID 
+then in the cart we loop through the arr and if the ID that has been click 
+match to the product in arr then we display in the cart box 

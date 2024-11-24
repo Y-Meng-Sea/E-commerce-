@@ -1,0 +1,95 @@
+:root {
+  --orangeRed: #f06138;
+  --red-slate: #ce3f3a;
+  --gray-slate: #565959;
+  --blue-slate: rgb(89, 89, 166);
+}
+
+.product-container {
+  display: flex;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-top: 2rem;
+}
+/* discount section  */
+
+.discount-container {
+  position: relative;
+  background-color: var(--orangeRed);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dicount-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.discount-cards-container {
+  display: flex;
+  overflow: hidden;
+  gap: 0.8rem;
+}
+.card {
+  background-color: white;
+  width: 220px;
+  border-radius: 0.5rem;
+}
+.discount-image > img {
+  width: 200px;
+}
+
+.discount-text {
+  font-size: small;
+  margin-bottom: 10px;
+  color: var(--red-slate);
+}
+.discount-text > span {
+  background-color: var(--red-slate);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+.dicount-price .small-price-point {
+  font-size: 10px;
+  vertical-align: text-top;
+}
+.dicount-price .previous-rpice {
+  font-size: 12px;
+  vertical-align: middle;
+  color: var(--gray-slate);
+  text-decoration: line-through;
+}
+.previous-btn {
+  background-color: white;
+  padding: 2rem 1rem;
+  border: 2px solid white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-size: 1rem;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.previous-btn:focus,
+.next-btn:focus {
+  border: 2px solid var(--blue-slate);
+}
+.next-btn {
+  background-color: white;
+  padding: 2rem 1rem;
+  border: 2px solid white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-size: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
