@@ -44,7 +44,7 @@
           </div>
           <div class="cart js-cart">
             <div class="cart-icon">
-              <p class="cart-quantity">0</p>
+              <p class="cart-quantity"></p>
               <img src="../asset/icon/cart-icon.png" alt="" />
             </div>
             <div class="cart-text">Cart</div>
@@ -58,6 +58,26 @@
               <i class="fa-solid fa-x"></i>
             </div>
           </div>
+          <!-- cart body -->
+          <div class="cart-item-body">
+            <div class="carts-display-container">
+              <!-- <div class="carts-card">
+                <div class="image">
+                  <img src="../asset/products/books.jpeg" alt="" />
+                </div>
+                <div class="product-text">Lorem ipsum dolor sit amet.</div>
+                <div class="amount">
+                  <span class="amount-number"></span>
+                  <div class="control-amount-btn">
+                    <div class="increase-btn"><i class="fa-solid fa-caret-up"></i></div>
+                    <div class="descrease-btn"><i class="fa-solid fa-caret-down"></i></div>
+                  </div>
+                </div>
+                <div class="pay"><button class="pay-btn">pay</button><button class="delete-btn">Remove</button></div>
+              </div> -->
+            </div>
+          </div>
+          <!-- end cart body -->
         </div>
       </div>
       <div class="side-menu">
@@ -74,37 +94,19 @@
           <div class="body">
             <section>
               <div class="goto">
-                <div class="gotoMain"><i class="fa-solid fa-chevron-left"></i>MAIN MENU</div>
-                <hr />
+                <div class="gotoMain">
+                  <div class="sub-category-head"><i class="fa-solid fa-chevron-left"></i><span>MAIN MENU</span></div>
+                  <hr />
+                  <div class="sub-category-body">
+                    <div class="sub-categories">Hello</div>
+                    <div class="sub-categories">Hello</div>
+                    <div class="sub-categories">Hello</div>
+                  </div>
+                </div>
               </div>
-              <div class="categories">Digital Content & Devices</div>
-              <div class="category"><span>Amazon Music </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>Kindle E-readers & Books</span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>Amazon Appstore</span><i class="fa-solid fa-chevron-right"></i></div>
-              <hr />
-              <div class="categories">Shop by Department</div>
-              <div class="category"><span>Electronics </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>Computers </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>Smart Home </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>Arts & Crafts </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="see-all-category"><span>see all </span><i class="fa-solid fa-chevron-down"></i></div>
-              <hr />
-              <div class="categories">Programs & Features</div>
-              <div class="category"><span>Gift Cards </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>Amazon Live </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>Shop By Interest</span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="category"><span>International Shopping </span><i class="fa-solid fa-chevron-right"></i></div>
-              <div class="see-all-category"><span>see all </span><i class="fa-solid fa-chevron-down"></i></div>
-              <hr />
-              <div class="categories">Help & Settings</div>
-              <div class="category">Your Account</div>
-              <div class="category">English</div>
-              <div class="category">United States</div>
-              <div class="category">Customer Service</div>
-              <div class="category">Sign in</div>
-              <!-- <div class="category"></div>
-              <div class="category"></div>
-              <div class="category"></div> -->
+              <div class="js-category-container">
+                <!-- insert content in js-->
+              </div>
             </section>
           </div>
         </div>
@@ -172,13 +174,40 @@
     <section class="product-container">
       <!-- filter side -->
       <div class="filter-menu">
-        <h1>Deal and Discount</h1>
+        <div class="Departments-filter">
+          <p>Department</p>
+          <ul></ul>
+        </div>
+        <div class="price-filter">
+          <p>Price</p>
+          <ul></ul>
+        </div>
+        <div class="discount-filter">
+          <p>Discount</p>
+          <ul></ul>
+        </div>
       </div>
       <!-- end filter side -->
 
       <!-- product display side -->
-      <div class="product-container">
-        <h1>Result</h1>
+      <div class="product-display">
+        <!-- <div class="product-card">
+          <div class="image">
+            <img src="../asset/products/bathroomstuff.jpg" alt="" />
+          </div>
+          <div class="discount">
+            <span class="off">20% off</span>
+            <span class="event">black friday</span>
+          </div>
+          <div class="decribe"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, sed?</p></div>
+          <div class="rated">
+            <div class="rate"><img src="../asset/ratting/rating-10.png" alt="" /></div>
+            <div class="user-rate">200</div>
+          </div>
+          <div class="prices">$99 <span class="small-text-price">99</span></div>
+          <div class="shipping">shipping to cambodia</div>
+          <button class="add-to-cart">Add to cart</button>
+        </div> -->
       </div>
       <!-- end product display side -->
     </section>
