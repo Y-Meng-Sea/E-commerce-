@@ -359,7 +359,8 @@ body {
 }
 .carts-card .image > img {
   width: 70px;
-  height: 70px;
+  /* height: 70px; */
+  padding-left: 5px;
   border-radius: 5px;
 }
 .pay-btn {

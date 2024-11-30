@@ -233,4 +233,6 @@ generateBestSlide(".best-product-slides3");
 
 //
 viewedItems();
-//
+// dynamic cart quantity
+let cartsItmes = document.querySelector(".cart-quantity");
+cartsItmes.innerText = 0;
